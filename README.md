@@ -7,6 +7,7 @@ Create a `.tf` file inside your root module to call the module and set variables
 ```
 module "mail_dns" {
 	source  = "m4xmorris/protonmail/cloudflare"
+	version = "" # <-- It is recommended to lock at known working versions. Remove this for latest release.
 	cloudflare_token = ""
 	cloudflare_zone_id = ""
 	verification_record = ""
