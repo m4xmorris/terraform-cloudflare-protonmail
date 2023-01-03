@@ -1,4 +1,3 @@
-# Mail service records
 resource "cloudflare_record" "verification" {
   zone_id    = var.cloudflare_zone_id
   name       = var.domain

@@ -17,6 +17,10 @@ variable "verification_record" {
 variable "spf_record" {
     description = "SPF record - only required if you have mutliple mail providers sharing this domain"
     default = "v=spf1 include:_spf.protonmail.ch mx ~all"
+    validation {
+      condition = can(regex("^(v=spf1).*$", var.spf_record))
+      error_message = "Invalid SPF record format."
+    }
   
 }
 variable "dkim_1" {
@@ -32,11 +36,11 @@ variable "dkim_3" {
   
 }
 variable "dmarc_policy" {
-    description = "The DMARC policy level to be set (none, quarantine or reject)"
+    description = "The DMARC policy level to be set (none/quarantine/reject)"
     default = "quarantine"
     validation {
-      condition = can(regex("^none$|^quarantine$|^reject$"))
-      error_message = "DMARC policy must be set to none, quarantine or reject."
+      condition = can(regex("^none$|^quarantine$|^reject$", var.dmarc_policy))
+      error_message = "DMARC policy must be one of none/quarantine/reject."
     }
   
 }
