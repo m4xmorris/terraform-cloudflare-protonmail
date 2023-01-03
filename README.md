@@ -7,7 +7,6 @@ Create a `.tf` file inside your root module to call the module and set variables
 ```
 module "mail_dns" {
 	source  = "m4xmorris/protonmail/cloudflare"
-	version = "1.0.0"
 	cloudflare_token = ""
 	cloudflare_zone_id = ""
 	verification_record = ""
