@@ -6,11 +6,6 @@ variable "domain" {
     }
 }
 
-variable "cloudflare_token" {
-    description = "Cloudflare API Token"
-    sensitive = true
-}
-
 variable "cloudflare_zone_id" {
     description = "Cloudflare Zone ID of the target domain"
 }
