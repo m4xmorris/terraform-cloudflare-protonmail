@@ -30,3 +30,6 @@ override.tf.json
 
 # macOS Weirdness
 .DS_Store
+
+# JetBrains
+.idea

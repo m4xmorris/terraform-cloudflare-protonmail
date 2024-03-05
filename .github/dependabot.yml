@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: "terraform"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "19:00"
+      timezone: "Australia/Sydney"
+    commit-message:
+      prefix: "chore:"
