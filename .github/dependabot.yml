@@ -8,3 +8,12 @@ updates:
       timezone: "Australia/Sydney"
     commit-message:
       prefix: "chore:"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "19:00"
+      timezone: "Australia/Sydney"
+    commit-message:
+      prefix: "chore:"
